@@ -1,0 +1,24 @@
+package com.ahri.violetbackend.service.impl;
+
+import com.ahri.violetbackend.domain.Role;
+import com.ahri.violetbackend.mapper.RoleMapper;
+import com.ahri.violetbackend.service.IRoleService;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
+@Service
+public class RoleServiceImpl implements IRoleService {
+    public RoleMapper roleMapper;
+
+    @Override
+    public List<Role> findAll() {
+        ArrayList<Role> roles = new ArrayList<>();
+        roles.add(new Role(1, "芙宁娜", "Furina", new Date(2023, Calendar.NOVEMBER, 13), "不休独舞", "4.3", "司颂座", 5));
+        roles.add(new Role(2, "八重神子", "Yae Miko", new Date(2023, Calendar.JULY, 27), "浮世笑百姿", "2.5", "仙狐座", 5));
+        return roles;
+    }
+}
