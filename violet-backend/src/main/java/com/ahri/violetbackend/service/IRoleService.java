@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface IRoleService {
     List<Role> findAll();
+
+    public List<Role> selectRoleList();
 }

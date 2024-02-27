@@ -3,8 +3,6 @@ package com.ahri.violetbackend.domain;
 import java.util.Date;
 
 public class Role {
-    // 主键
-    private int id;
     // 姓名（中文）
     private String nameZh;
     // 姓名（英文）
@@ -23,10 +21,9 @@ public class Role {
     public Role() {
     }
 
-    public Role(int id, String nameZh, String nameEn, Date birthday, String title, String version, String constellation,
+    public Role(String nameZh, String nameEn, Date birthday, String title, String version, String constellation,
                 int level) {
         super();
-        this.id = id;
         this.nameZh = nameZh;
         this.nameEn = nameEn;
         this.birthday = birthday;
